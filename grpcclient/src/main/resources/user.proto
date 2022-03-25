@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpcclient.proto";
+
+service user{
+  rpc hello(UserName) returns(Respose);
+}
+message UserName{
+  string name = 1;
+}
+message Respose{
+  string greeting = 1;
+  int32 code = 2;
+}
